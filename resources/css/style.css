@@ -1,0 +1,319 @@
+/*-----------------------------------------*/
+/*BASIC SETUP*/
+/*-----------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	background-color: #fff;
+	color: #555;
+	font-family: 'Lato', 'Arial', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	text-rendering: optimizeLegibility;
+	overflow-x: hidden;
+	
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*-----------------------------------------*/
+/*REUSABLE COMPONENTS*/
+/*-----------------------------------------*/
+
+.row {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+section {
+	padding: 80px 0;
+}
+.box {
+	padding: 1%;
+}
+
+/*----- HEADINGS ----*/
+
+h1,
+h2,
+h3 {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+h1 {
+	margin: 0;
+	margin-bottom: 20px;
+	color: #fff;
+	font-size: 240%;
+	word-spacing: 4px;
+	letter-spacing: 1px;
+}
+
+h2 {
+	font-size: 180%;
+	word-spacing: 2px;
+	text-align: center;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+}
+
+h3 {
+	font-size: 110%;
+	margin-bottom: 15px;
+	
+}
+
+h2:after {
+	display: block;
+	height: 2px;
+	background-color: #000;
+	content: " ";
+	width: 100px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+/* ---- PARAGRAPHS ----*/
+
+.first-p {
+	line-height: 145%;
+	width: 70%;
+	margin-left: 15%;
+}
+
+.box p {
+	font-size: 90%;
+	line-height: 145%;
+}
+
+/* ---- ICONS ----*/
+
+.icon-big {
+	font-size: 350%;
+	display: block;
+	margin-bottom: 10px;
+	color: #000;
+}
+
+/* ---- LINKS ----*/
+
+a:link,
+a:visited {
+	color: #000;
+	text-decoration: none;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #000;
+	transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hoover,
+a:active {
+	color: #555;
+	border-bottom: 1px solid transparent;
+}
+
+
+/*-----------------------------------------*/
+/* HEADER */
+/*-----------------------------------------*/
+
+
+header {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/DogsTrust.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	background-attachment: fixed;
+}
+
+.title-box {
+	position: absolute;
+	width: 1140px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.logo {
+	height: 100px;
+	width: auto;
+	float: left;
+	margin-top: 20px;
+}
+
+/* Main Navi */
+
+.main-nav {
+	float: right;
+	list-style: none;
+	margin-top: 55px;
+}
+
+.main-nav li {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+	padding: 8px 0;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 90%;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover, 
+.main-nav li a:active {
+    border-bottom: 2px solid #fff;
+}
+
+/*-----------------------------------------*/
+/* Section-Paragraphs */
+/*-----------------------------------------*/
+
+.Paragraphs .first-p {
+	margin-bottom: 30px;
+}
+
+/*-----------------------------------------*/
+/* Customers */
+/*-----------------------------------------*/
+
+
+.Customers {
+	padding: 0;
+}
+
+.dog-showcase {
+	list-style: none;
+	width: 100%;
+}
+
+.dog-showcase li {
+	display: block;
+	float: left;
+	width: 20%;
+}
+
+.dog-photo {
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	background-color: #000;
+}
+
+.dog-photo img {
+	opacity: 0.7;
+	width: 100%;
+	height: 250px;
+	transform: scale(1.15);
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.dog-photo img:hover {
+	opacity: 1;
+	transform: scale(1.03);
+}
+
+/*-----------------------------------------*/
+/* Table */
+/*-----------------------------------------*/
+
+
+table,
+th,
+td {
+	border: 1px solid black;
+	text-align: center;
+	padding: 10px;
+	border-spacing: 5px;
+	background-color: #f1f1c1;	
+	margin: 0 auto;
+	
+}
+
+/*-----------------------------------------*/
+/* Links */
+/*-----------------------------------------*/
+
+.link {
+	list-style: none;
+}
+
+.link li {
+	display: block;
+	margin: 0 auto;
+	margin-left: 40%;
+	margin-top: 20px;
+}
+
+.link li a:link,
+.link li a:visited {
+	padding: 8px 0;
+	color: #000;
+	text-decoration: none;
+	font-size: 90%;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.2s;
+}
+
+.link li a:hover, 
+.link li a:active {
+    border-bottom: 2px solid #000;
+}
+
+
+/*-----------------------------------------*/
+/* FORM */
+/*-----------------------------------------*/
+
+
+.contact-form {
+	width: 90%;
+	margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+.Form-box {
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 560px;
+    padding-top: 40px;
+}
